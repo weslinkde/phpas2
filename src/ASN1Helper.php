@@ -102,4 +102,9 @@ class ASN1Helper extends ASN1
 
         return ASN1::asn1map($decoded[0], $mapping);
     }
+
+    public static function staticEncodeDER($source, $mapping, $special = array()) {
+        $instance = new self();
+        $instance->encodeDER($source, $mapping, $special);
+    }
 }

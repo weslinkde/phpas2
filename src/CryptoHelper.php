@@ -191,9 +191,9 @@ class CryptoHelper
             'Content-Encoding' => $encoding,
         ];
 
-        $content = ASN1Helper::encodeDER([
+        $content = ASN1Helper::staticEncodeDER([
             'contentType' => ASN1Helper::COMPRESSED_DATA_OID,
-            'content' => ASN1Helper::encodeDER([
+            'content' => ASN1Helper::staticEncodeDER([
                 'version' => 0,
                 'compression' => [
                     'algorithm' => ASN1Helper::ALG_ZLIB_OID,
