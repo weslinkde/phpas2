@@ -2,6 +2,8 @@
 
 namespace AS2;
 
+use models\Message;
+
 interface StorageInterface
 {
     /**
@@ -17,10 +19,10 @@ interface StorageInterface
     public function getMessage($id);
 
     /**
-     * @param MessageInterface $message
+     * @param Message $message
      * @return bool
      */
-    public function saveMessage(MessageInterface $message);
+    public function saveMessage(Message $message);
 
     /**
      * @param array $data
