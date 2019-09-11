@@ -98,4 +98,5 @@ interface PartnerInterface
      */
     public function getMdnSubject();
 
+    public function getData($key = '', $index = null);
 }
