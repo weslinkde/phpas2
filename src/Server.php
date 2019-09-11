@@ -4,7 +4,6 @@ namespace AS2;
 
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\Psr7\ServerRequest;
-use models\FileStorage;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Log\LoggerInterface;
 use Psr\Log\NullLogger;
@@ -30,9 +29,9 @@ class Server
      * Server constructor.
      *
      * @param Management $management
-     * @param FileStorage $storage
+     * @param StorageInterface $storage
      */
-    public function __construct(Management $management, FileStorage $storage)
+    public function __construct(Management $management, StorageInterface $storage)
     {
         $this->manager = $management;
         $this->storage = $storage;
