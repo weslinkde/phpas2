@@ -188,4 +188,6 @@ interface MessageInterface
      * @return $this
      */
     public function setCompressed($val = true);
+
+    public function getData($key = '', $index = null);
 }
