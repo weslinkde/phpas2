@@ -261,7 +261,7 @@ class MimePart implements \Psr\Http\Message\MessageInterface
                 // Get multi-part content
                 $pattern = '/' . $separator . '[\r\n]*(.+?)' . $separator . '--/s';
                 if (preg_match($pattern, $body, $matches)) {
-                    $parts = preg_split('/\r?\n' . $separator . '\r?\n/', $matches[1]);
+                    $parts = preg_split('/[\r\n]*' . $separator . '[\r\n]*/', $matches[1]);
                     foreach ($parts as $part) {
                         $this->addPart($part);
                     }
