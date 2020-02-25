@@ -9,6 +9,12 @@
       "email": "vk.tiamo@gmail.com"
     }
   ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@github.com:weslinkde/phpas2.git"
+    }
+  ],
   "keywords": [
     "edi",
     "ediint",
